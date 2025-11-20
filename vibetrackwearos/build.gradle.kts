@@ -9,7 +9,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "br.ufpr.vibetrack.vibetrackwearos"
+        applicationId = "br.ufpr.vibetrack.mobile"
         minSdk = 30
         targetSdk = 36
         versionCode = 1
@@ -51,22 +51,12 @@ dependencies {
     implementation(libs.wear.tooling.preview)
     implementation(libs.activity.compose)
     implementation(libs.core.splashscreen)
-    // Para a UI do Wear OS
     implementation("androidx.wear.compose:compose-material:1.3.0")
     implementation("androidx.wear.compose:compose-foundation:1.3.0")
-    // Para comunicação com o celular
     implementation("com.google.android.gms:play-services-wearable:18.1.0")
-    // Para serializar os dados em JSON
     implementation("com.google.code.gson:gson:2.10.1")
-    // Para coletar dados de saúde (opcional, mas recomendado)
     implementation("androidx.health:health-services-client:1.1.0-alpha03")
-
-    // --- CORREÇÃO APLICADA ---
-    // A linha duplicada "2.8.0" foi removida daqui.
-
-    // Para o AndroidViewModel e a função getApplication()
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
-    // Para a delegação "by viewModels()" na MainActivity
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1")
 

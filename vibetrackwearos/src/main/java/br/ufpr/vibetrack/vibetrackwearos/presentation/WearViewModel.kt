@@ -194,13 +194,13 @@ class WearViewModel(private val app: Application) : AndroidViewModel(app), Senso
             Log.d("WearViewModel", "Nós conectados: ${nodes.map{it.id + ':' + it.displayName}}")
             Log.d("WearViewModel", "Celular conectado: ${phoneNode?.id + ':' + phoneNode?.displayName}")
 
-            nodes.forEach { node ->
-                Wearable.getMessageClient(context).sendMessage(node.id, "/experiment-data", "hello".toByteArray()).addOnSuccessListener {
-                    Log.d("WearTest", "mensagem enviada para ${node.displayName}")
-                }.addOnFailureListener { e ->
-                    Log.e("WearTest", "falha enviar", e)
-                }
-            }
+//            nodes.forEach { node ->
+//                Wearable.getMessageClient(context).sendMessage(node.id, "/experiment-data", "hello".toByteArray()).addOnSuccessListener {
+//                    Log.d("WearTest", "mensagem enviada para ${node.displayName}")
+//                }.addOnFailureListener { e ->
+//                    Log.e("WearTest", "falha enviar", e)
+//                }
+//            }
 
 
             if (phoneNode == null) {

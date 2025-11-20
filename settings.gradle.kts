@@ -20,5 +20,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "VibeTrackWearOS"
-include(":app")
 include(":vibetrackwearos")
